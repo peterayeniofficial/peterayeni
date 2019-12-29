@@ -1,0 +1,93 @@
+{
+  "name": "gatsby-starter-bootstrap",
+  "description": "Simple starter for Gatsby",
+  "version": "2.0.1",
+  "author": "Futoshi Iwashita <jaxx2104@gmail.com>",
+  "dependencies": {
+    "gatsby": "2.18.16",
+    "gatsby-image": "2.2.37",
+    "gatsby-link": "2.2.27",
+    "gatsby-plugin-catch-links": "2.1.21",
+    "gatsby-plugin-feed": "2.3.25",
+    "gatsby-plugin-google-analytics": "2.1.31",
+    "gatsby-plugin-manifest": "2.2.34",
+    "gatsby-plugin-netlify": "2.1.30",
+    "gatsby-plugin-nprogress": "2.1.17",
+    "gatsby-plugin-offline": "3.0.30",
+    "gatsby-plugin-preact": "3.1.24",
+    "gatsby-plugin-react-helmet": "3.1.18",
+    "gatsby-plugin-sass": "^2.1.0",
+    "gatsby-plugin-sharp": "2.3.10",
+    "gatsby-plugin-sitemap": "2.2.24",
+    "gatsby-plugin-twitter": "2.1.17",
+    "gatsby-remark-copy-linked-files": "2.1.33",
+    "gatsby-remark-images": "3.1.39",
+    "gatsby-remark-prismjs": "3.3.28",
+    "gatsby-remark-responsive-iframe": "2.2.30",
+    "gatsby-remark-smartypants": "2.1.19",
+    "gatsby-source-filesystem": "2.1.43",
+    "gatsby-transformer-remark": "2.6.45",
+    "gatsby-transformer-sharp": "2.3.9"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "1.2.26",
+    "@fortawesome/free-brands-svg-icons": "5.12.0",
+    "@fortawesome/free-solid-svg-icons": "5.12.0",
+    "@fortawesome/react-fontawesome": "0.1.8",
+    "animate.css": "3.7.2",
+    "babel-eslint": "10.0.3",
+    "bootstrap": "4.4.1",
+    "emergence.js": "1.1.2",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "6.7.0",
+    "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-react": "7.17.0",
+    "font-awesome": "4.7.0",
+    "gh-pages": "2.1.1",
+    "husky": "3.1.0",
+    "lint-staged": "9.5.0",
+    "lodash": "4.17.15",
+    "modern-normalize": "0.5.0",
+    "node-sass": "4.13.0",
+    "prettier": "1.19.1",
+    "prismjs": "1.17.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-helmet": "5.2.1",
+    "textlint": "11.5.0",
+    "textlint-rule-preset-ja-spacing": "2.0.1",
+    "textlint-rule-preset-japanese": "4.0.4"
+  },
+  "keywords": [
+    "gatsby",
+    "gatstrap",
+    "starter"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.md": [
+      "npm run lint:textfix",
+      "git add"
+    ]
+  },
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.+(js|json|md)\"",
+    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint:text": "textlint src/pages/**/index.md",
+    "lint:textfix": "textlint --fix src/pages/**/index.md",
+    "test": "prettier --write \"**/*.+(js|jsx|json|css|scss)\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
