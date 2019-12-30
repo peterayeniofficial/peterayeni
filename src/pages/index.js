@@ -31,13 +31,22 @@ class Profile extends React.Component {
                   Good.
                 </p>
                 <div className="social social-sm social-hover-bg-brand mb-6">
-                  <a className="social-github" href="#">
+                  <a
+                    className="social-git"
+                    href="https://www.linkedin.com/in/peterayeni/"
+                  >
                     <i className="fa fa-github"></i>
                   </a>
-                  <a className="social-twitter" href="#">
+                  <a
+                    className="social-twitter"
+                    href="https://twitter.com/thePeterAyeni"
+                  >
                     <i className="fa fa-twitter"></i>
                   </a>
-                  <a className="social-instagram" href="#">
+                  <a
+                    className="social-linkedin"
+                    href="https://www.linkedin.com/in/peterayeni/"
+                  >
                     <i className="fa fa-linkedin"></i>
                   </a>
                 </div>
@@ -48,12 +57,12 @@ class Profile extends React.Component {
                     Projects
                   </a>
 
-                  <Link
+                  <a
                     className="btn btn-lg btn-round btn-outline-accent mw-200"
-                    to="/thoughts"
+                    href="https://medium.com/@thepeterayeni"
                   >
                     Thoughts
-                  </Link>
+                  </a>
                 </p>
               </div>
             </div>
