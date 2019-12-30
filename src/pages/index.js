@@ -1,65 +1,101 @@
-import { graphql } from 'gatsby'
-import React from 'react'
+import { graphql, Link } from 'gatsby'
 import get from 'lodash/get'
+import Img from 'gatsby-image'
+import React from 'react'
 
-import Post from 'templates/post'
-import Meta from 'components/meta'
+import { siteMetadata } from '../../gatsby-config'
 import Layout from 'components/layout'
+import Meta from 'components/meta'
+import Icon from 'components/icon'
 
-const BlogIndex = ({ data, location }) => {
-  const posts = get(data, 'remark.posts')
-  return (
-    <Layout location={location}>
-      <Meta site={get(data, 'site.meta')} />
-      {posts.map(({ post }, i) => (
-        <Post
-          data={post}
-          options={{
-            isIndex: true,
-          }}
-          key={i}
-        />
-      ))}
-    </Layout>
-  )
+class Profile extends React.Component {
+  render() {
+    const { location, data } = this.props
+    const profile = get(data, 'profile.childImageSharp.fixed')
+    const work1 = get(data, 'work1.childImageSharp.sizes')
+    const work2 = get(data, 'work2.childImageSharp.sizes')
+    const back1 = get(data, 'back1.childImageSharp.sizes')
+    const back2 = get(data, 'back2.childImageSharp.sizes')
+
+    return (
+      <Layout location={location}>
+        <Meta site={siteMetadata} title="Profile" />
+        <header className="header text-white h-fullscreen bg-fixed header-bg">
+          <div className="overlay opacity-95"></div>
+          <div className="container text-center">
+            <div className="row align-items-center h-100 pt-8 pt-md-7 pb-md-8">
+              <div className="col-md-8 mx-auto">
+                <h1 className="header-name">I'm Peter Ayeni.</h1>
+                <p className="lead mt-5 mb-8">
+                  I am passionate about using Technology and Design for Social
+                  Good.
+                </p>
+
+                <p className="gap-xy">
+                  <a className="btn btn-lg btn-round btn-light mw-200" href="#">
+                    <i className="fa fa-play mr-2 small-8 align-middle"></i>{' '}
+                    Projects
+                  </a>
+
+                  <Link
+                    className="btn btn-lg btn-round btn-outline-success mw-200"
+                    to="/thoughts"
+                  >
+                    Thoughts
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </div>
+        </header>
+      </Layout>
+    )
+  }
 }
 
-export default BlogIndex
+export default Profile
 
-export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      meta: siteMetadata {
-        title
-        description
-        url: siteUrl
-        author
-        twitter
-        adsense
+export const query = graphql`
+  query ProfilePageQuery {
+    profile: file(name: { eq: "profile" }) {
+      childImageSharp {
+        fixed(width: 120, height: 120) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
       }
     }
-    remark: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      posts: edges {
-        post: node {
-          html
-          frontmatter {
-            layout
-            title
-            path
-            category
-            tags
-            description
-            date(formatString: "YYYY/MM/DD")
-            image {
-              childImageSharp {
-                fluid(maxWidth: 500) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
+    work1: file(name: { eq: "work1" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    work2: file(name: { eq: "work2" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    work3: file(name: { eq: "work3" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    back1: file(name: { eq: "back1" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    back2: file(name: { eq: "back2" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
         }
       }
     }
