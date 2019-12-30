@@ -7,6 +7,8 @@ import { siteMetadata } from '../../gatsby-config'
 import Layout from 'components/layout'
 import Meta from 'components/meta'
 import Icon from 'components/icon'
+import Sport from '../components/sport/'
+import Wyr from '../components/wyr/'
 
 class Profile extends React.Component {
   render() {
@@ -19,7 +21,7 @@ class Profile extends React.Component {
 
     return (
       <Layout location={location}>
-        <Meta site={siteMetadata} title="Profile" />
+        <Meta site={siteMetadata} title="Peter Ayeni Official Website" />
         <header className="header text-white h-fullscreen bg-fixed header-bg">
           <div className="overlay opacity-95"></div>
           <div className="container text-center">
@@ -52,7 +54,10 @@ class Profile extends React.Component {
                 </div>
 
                 <p className="gap-xy">
-                  <a className="btn btn-lg btn-round btn-light mw-200" href="#">
+                  <a
+                    className="btn btn-lg btn-round btn-light mw-200"
+                    href="#top-project"
+                  >
                     <i className="fa fa-play mr-2 small-8 align-middle"></i>{' '}
                     Projects
                   </a>
@@ -68,6 +73,8 @@ class Profile extends React.Component {
             </div>
           </div>
         </header>
+        <Wyr />
+        <Sport />
       </Layout>
     )
   }
