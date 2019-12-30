@@ -9601,8 +9601,8 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts//fontawesome-webfont.eot?v=4.7.0");
-  src: url("../fonts//fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts//fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts//fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts//fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts//fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("./fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("./fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("./fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("./fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("./fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("./fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -12249,15 +12249,15 @@ you can use the generic selector below, but it's slower:
 
 @font-face {
   font-family: 'et-line';
-  src: url("../fonts/et-line.eot");
-  src: url("../fonts/et-line.eot?#iefix") format("embedded-opentype"), url("../fonts/et-line.woff") format("woff"), url("../fonts/et-line.ttf") format("truetype"), url("../fonts/et-line.svg#et-line") format("svg");
+  src: url("./fonts/et-line.eot");
+  src: url("./fonts/et-line.eot?#iefix") format("embedded-opentype"), url("./fonts/et-line.woff") format("woff"), url("./fonts/et-line.ttf") format("truetype"), url("./fonts/et-line.svg#et-line") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'themify';
-  src: url("../fonts/themify.eot?-fvbane");
-  src: url("../fonts/themify.eot?#iefix-fvbane") format("embedded-opentype"), url("../fonts/themify.woff?-fvbane") format("woff"), url("../fonts/themify.ttf?-fvbane") format("truetype"), url("../fonts/themify.svg?-fvbane#themify") format("svg");
+  src: url("./fonts/themify.eot?-fvbane");
+  src: url("./fonts/themify.eot?#iefix-fvbane") format("embedded-opentype"), url("./fonts/themify.woff?-fvbane") format("woff"), url("./fonts/themify.ttf?-fvbane") format("truetype"), url("./fonts/themify.svg?-fvbane#themify") format("svg");
   font-weight: normal;
   font-style: normal; }
 

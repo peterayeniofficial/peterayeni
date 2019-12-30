@@ -26,10 +26,21 @@ class Profile extends React.Component {
             <div className="row align-items-center h-100 pt-8 pt-md-7 pb-md-8">
               <div className="col-md-8 mx-auto">
                 <h1 className="header-name">I'm Peter Ayeni.</h1>
-                <p className="lead mt-5 mb-8">
+                <p className="lead mt-5 mb-2">
                   I am passionate about using Technology and Design for Social
                   Good.
                 </p>
+                <div className="social social-sm social-hover-bg-brand mb-6">
+                  <a className="social-github" href="#">
+                    <i className="fa fa-github"></i>
+                  </a>
+                  <a className="social-twitter" href="#">
+                    <i className="fa fa-twitter"></i>
+                  </a>
+                  <a className="social-instagram" href="#">
+                    <i className="fa fa-linkedin"></i>
+                  </a>
+                </div>
 
                 <p className="gap-xy">
                   <a className="btn btn-lg btn-round btn-light mw-200" href="#">
@@ -38,7 +49,7 @@ class Profile extends React.Component {
                   </a>
 
                   <Link
-                    className="btn btn-lg btn-round btn-outline-success mw-200"
+                    className="btn btn-lg btn-round btn-outline-accent mw-200"
                     to="/thoughts"
                   >
                     Thoughts

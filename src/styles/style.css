@@ -21,3 +21,26 @@
 		background-position: 0% 50%;
 	}
 }
+
+.btn-outline-accent {
+  color: #39ece6;
+  background-color: transparent;
+  background-image: none;
+  border-color: #39ece6; }
+  .btn-outline-success:focus, .btn-outline-success.focus {
+    color: #39ece6;
+    box-shadow: 0 0 0 0rem rgba(57, 236, 230, 0.5); }
+  .btn-outline-success:hover {
+    color: #fff;
+    background-color: #39ece6;
+    border-color: #39ece6;
+    box-shadow: 0 1px 10px rgba(57, 236, 230, 0.4); }
+  .btn-outline-success.disabled, .btn-outline-success:disabled {
+    color: #39ece6;
+    background-color: transparent; }
+  .btn-outline-success:not([disabled]):not(.disabled):active, .btn-outline-success:not([disabled]):not(.disabled).active,
+  .show > .btn-outline-success.dropdown-toggle {
+    color: #fff;
+    background-color: #39ece6;
+    border-color: #39ece6;
+    box-shadow: 0 0 0 0rem rgba(57, 236, 230, 0.5); }
